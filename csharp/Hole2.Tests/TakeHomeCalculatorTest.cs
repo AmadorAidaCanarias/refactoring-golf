@@ -10,7 +10,7 @@ namespace Hole2.Tests
         {
             int first = new TakeHomeCalculator(10).NetAmount(new Pair<int, String>(40, "GBP"),
                 new Pair<int, String>(50, "GBP"),
-                new Pair<int, String>(60, "GBP")).first;
+                new Pair<int, String>(60, "GBP")).value;
             Assert.Equal(135, first);
         }
 
