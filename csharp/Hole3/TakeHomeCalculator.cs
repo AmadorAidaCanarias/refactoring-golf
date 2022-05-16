@@ -21,7 +21,7 @@ namespace Hole3
 
             foreach (Money next in monies)
             {
-                total = Plus(next, total);
+                total = total.Plus(next);
             }
 
 
@@ -34,17 +34,6 @@ namespace Hole3
             }
 
             return new Money(total.value - tax.value, first.currency);
-        }
-
-        private Money Plus(Money other, Money total)
-        {
-            if (!other.currency.Equals(total.currency))
-            {
-                throw new Incalculable();
-            }
-
-            total = new Money(total.value + other.value, other.currency);
-            return total;
         }
     }
 }
