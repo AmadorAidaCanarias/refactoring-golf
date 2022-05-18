@@ -2,7 +2,7 @@
 {
     public class TaxRate
     {
-        private readonly int percent;
+        public readonly int percent;
 
         public TaxRate(int percent)
         {
