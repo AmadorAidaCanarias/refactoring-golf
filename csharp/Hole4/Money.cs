@@ -20,7 +20,7 @@ namespace Hole4
                 throw new Incalculable();
             }
 
-            return new Money(value + other.value, other.currency);
+            return Create(value + other.value, other.currency);
         }
 
         public static Money Create(int value, string currency)
