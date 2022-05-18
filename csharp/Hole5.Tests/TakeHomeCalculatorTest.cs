@@ -1,13 +1,10 @@
 using System;
 using Xunit;
 
-namespace Hole5.Tests
-{
-    public class TakeHomeCalculatorTest
-    {
+namespace Hole5.Tests {
+    public class TakeHomeCalculatorTest {
         [Fact]
-        public void CanCalculateTax()
-        {
+        public void CanCalculateTax() {
             int first = new TakeHomeCalculator(TaxRate.Of(10)).NetAmount(Money.Create(40, "GBP"),
                 Money.Create(50, "GBP"),
                 Money.Create(60, "GBP")).value;
@@ -15,8 +12,7 @@ namespace Hole5.Tests
         }
 
         [Fact]
-        public void CannotSumDifferentCurrencies()
-        {
+        public void CannotSumDifferentCurrencies() {
             Assert.Throws<Incalculable>(() => new TakeHomeCalculator(new TaxRate(10)).NetAmount(
                 Money.Create(4, "GBP"), Money.Create(5, "USD")));
         }

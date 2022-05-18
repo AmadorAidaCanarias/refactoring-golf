@@ -1,13 +1,10 @@
 ﻿using System;
 
-namespace Hole5
-{
-    public class TaxRate
-    {
+namespace Hole5 {
+    public class TaxRate {
         private readonly int percent;
 
-        public TaxRate(int percent)
-        {
+        public TaxRate(int percent) {
             this.percent = percent;
         }
 
@@ -15,8 +12,7 @@ namespace Hole5
             return new TaxRate(percent);
         }
 
-        public Money Aply(Money total)
-        {
+        public Money Aply(Money total) {
             Double amount = total.value * (percent / 100d);
             return Money.Create(Convert.ToInt32(amount), total.currency);
         }
