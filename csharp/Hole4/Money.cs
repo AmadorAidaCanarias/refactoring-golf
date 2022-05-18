@@ -22,5 +22,10 @@ namespace Hole4
 
             return new Money(value + other.value, other.currency);
         }
+
+        public static Money Create(int value, string currency)
+        {
+            return new Money(value, currency);
+        }
     }
 }
