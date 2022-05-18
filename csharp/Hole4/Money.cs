@@ -35,7 +35,7 @@ namespace Hole4
                 throw new Incalculable();
             }
 
-            return new Money(value - Other.value, currency);
+            return Create(value - Other.value, currency);
         }
     }
 }
