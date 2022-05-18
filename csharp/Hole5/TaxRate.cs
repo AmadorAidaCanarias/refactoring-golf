@@ -8,5 +8,9 @@
         {
             this.percent = percent;
         }
+
+        public static TaxRate Of(int percent) {
+            return new TaxRate(percent);
+        }
     }
 }
